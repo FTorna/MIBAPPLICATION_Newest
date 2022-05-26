@@ -214,24 +214,53 @@ public class EditAlien extends javax.swing.JFrame {
         btnOK = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblID.setForeground(new java.awt.Color(255, 255, 255));
         lblID.setText("ID:");
+        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 106, -1));
 
-        lblNamn.setText("Namn:");
+        lblNamn.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblNamn.setForeground(new java.awt.Color(255, 255, 255));
+        lblNamn.setText("Name:");
+        getContentPane().add(lblNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 106, -1));
 
-        lblTelefon.setText("Telefon:");
+        lblTelefon.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblTelefon.setForeground(new java.awt.Color(255, 255, 255));
+        lblTelefon.setText("Phone Number:");
+        getContentPane().add(lblTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 106, -1));
 
-        lblRegDatum.setText("Registreringsdatum:");
+        lblRegDatum.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblRegDatum.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegDatum.setText("Registration Date:");
+        getContentPane().add(lblRegDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
 
-        lblPlats.setText("Plats:");
+        lblPlats.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblPlats.setForeground(new java.awt.Color(255, 255, 255));
+        lblPlats.setText("Region:");
+        getContentPane().add(lblPlats, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
 
+        lblRas.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblRas.setForeground(new java.awt.Color(255, 255, 255));
         lblRas.setText("Ras: ");
+        getContentPane().add(lblRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, -1, -1));
 
-        lblAnsvarig.setText("AnsvarigAgent: ");
+        lblAnsvarig.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAnsvarig.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnsvarig.setText("Responsible Agent: ");
+        getContentPane().add(lblAnsvarig, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
 
+        getContentPane().add(cbAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, 130, -1));
+
+        lblBenamning.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblBenamning.setForeground(new java.awt.Color(255, 255, 255));
         lblBenamning.setText("Benämning: ");
+        getContentPane().add(lblBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, 20));
 
         cbRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Worm", "Squid", "Boglodite" }));
         cbRas.addActionListener(new java.awt.event.ActionListener() {
@@ -239,10 +268,19 @@ public class EditAlien extends javax.swing.JFrame {
                 cbRasActionPerformed(evt);
             }
         });
+        getContentPane().add(cbRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 130, -1));
 
         cbPlats.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Örebro", "Västerås", "Vilhelmina", "Borås" }));
+        getContentPane().add(cbPlats, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 130, -1));
+        getContentPane().add(txtBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 330, 100, -1));
+        getContentPane().add(txtRegDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 130, -1));
+        getContentPane().add(txtTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 130, -1));
+        getContentPane().add(txtNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 130, -1));
 
+        lblVisaID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblVisaID.setForeground(new java.awt.Color(255, 255, 255));
         lblVisaID.setText("jLabel9");
+        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
 
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
@@ -250,113 +288,31 @@ public class EditAlien extends javax.swing.JFrame {
                 btnOKActionPerformed(evt);
             }
         });
+        getContentPane().add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 73, -1));
 
-        btnCancel.setText("CANCEL");
+        btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 30, 86, -1));
 
-        btnDelete.setText("DELETE");
+        btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 73, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAnsvarig)
-                            .addComponent(lblPlats)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblRas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblBenamning)))
-                        .addGap(18, 18, 18)
-                        .addComponent(txtBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                        .addComponent(btnOK, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(126, 126, 126)
-                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(98, 98, 98))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cbAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblRegDatum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblTelefon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblNamn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtRegDatum)
-                                    .addComponent(txtTelefon)
-                                    .addComponent(txtNamn)
-                                    .addComponent(lblVisaID)
-                                    .addComponent(cbPlats, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbRas, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(lblID))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(lblVisaID))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnDelete)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblNamn)
-                            .addComponent(txtNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblTelefon)
-                            .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRegDatum)
-                            .addComponent(txtRegDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPlats)
-                            .addComponent(cbPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRas)
-                            .addComponent(cbRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblAnsvarig)
-                            .addComponent(cbAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOK)
-                    .addComponent(btnCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Edit Alien Information");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -418,13 +374,13 @@ public class EditAlien extends javax.swing.JFrame {
        switch(ras){
            case "Squid":
                lblBenamning.setVisible(true);
-               lblBenamning.setText("Ange antal armar: ");
+               lblBenamning.setText("Amount of Arms: ");
                txtBenamning.setVisible(true);
                txtBenamning.setText(squidDesc);
                break;
            case "Boglodite":
                lblBenamning.setVisible(true);
-               lblBenamning.setText("Ange antal boogies: ");
+               lblBenamning.setText("Amount of Boogies: ");
                txtBenamning.setVisible(true);
                txtBenamning.setText(bogoDesc);
                break;
@@ -492,6 +448,8 @@ public class EditAlien extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbAnsvarigAgent;
     private javax.swing.JComboBox<String> cbPlats;
     private javax.swing.JComboBox<String> cbRas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAnsvarig;
     private javax.swing.JLabel lblBenamning;
     private javax.swing.JLabel lblID;
