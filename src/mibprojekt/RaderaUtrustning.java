@@ -45,6 +45,7 @@ public class RaderaUtrustning extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnRadera.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRadera.setText("Delete");
         btnRadera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +54,7 @@ public class RaderaUtrustning extends javax.swing.JFrame {
         });
         getContentPane().add(btnRadera, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 105, -1));
 
+        btnCancel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

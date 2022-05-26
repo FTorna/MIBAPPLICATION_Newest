@@ -222,8 +222,8 @@ public class EditAlien extends javax.swing.JFrame {
 
         lblID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblID.setForeground(new java.awt.Color(255, 255, 255));
-        lblID.setText("ID:");
-        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 106, -1));
+        lblID.setText("Alien ID:");
+        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 106, -1));
 
         lblNamn.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblNamn.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,6 +282,7 @@ public class EditAlien extends javax.swing.JFrame {
         lblVisaID.setText("jLabel9");
         getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
 
+        btnOK.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,6 +291,7 @@ public class EditAlien extends javax.swing.JFrame {
         });
         getContentPane().add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 73, -1));
 
+        btnCancel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,6 +300,7 @@ public class EditAlien extends javax.swing.JFrame {
         });
         getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 30, 86, -1));
 
+        btnDelete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

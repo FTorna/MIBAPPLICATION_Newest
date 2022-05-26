@@ -37,43 +37,45 @@ public class Andra_Omradeschef extends javax.swing.JFrame {
         cbAgentID = new javax.swing.JComboBox<>();
         cbOmrade = new javax.swing.JComboBox<>();
         btnAndraOmradeschef = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAndraOmradeschef.setText("Ändra Omredeschef");
+        getContentPane().add(cbAgentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 130, -1));
+
+        getContentPane().add(cbOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 130, -1));
+
+        btnAndraOmradeschef.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        btnAndraOmradeschef.setText("Update Region Manager");
         btnAndraOmradeschef.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAndraOmradeschefActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAndraOmradeschef, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 190, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(cbAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(94, 94, 94)
-                        .addComponent(cbOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(btnAndraOmradeschef)))
-                .addContainerGap(175, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnAndraOmradeschef)
-                .addContainerGap(186, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Update Region Manager");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Agent ID:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Region:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,9 +84,8 @@ public class Andra_Omradeschef extends javax.swing.JFrame {
         String agentID = cbAgentID.getSelectedItem().toString();
         String omrade = cbOmrade.getSelectedItem().toString();
         try {
-
-            idb.fetchSingle("Delete from omradeschef where omrade = " + getOmrade() + "; Insert Into omradeschef (agent_id, omrade) VALUES ( " + agentID + ", " + getOmrade() + " );");
-
+            String uppdatera = "UPDATE omradeschef SET agent_id =" + agentID + " WHERE Omrade = " + getOmrade() + ""; 
+            idb.update(uppdatera);
         } 
         catch (Exception annatUndantag) {
             JOptionPane.showMessageDialog(null, "Something went wrong. Please contact your IT-Administrator.");
@@ -177,5 +178,9 @@ public class Andra_Omradeschef extends javax.swing.JFrame {
     private javax.swing.JButton btnAndraOmradeschef;
     private javax.swing.JComboBox<String> cbAgentID;
     private javax.swing.JComboBox<String> cbOmrade;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
