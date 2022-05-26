@@ -116,6 +116,7 @@ public class RegAgent extends javax.swing.JFrame {
         lblVisaID.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 88, 18));
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
