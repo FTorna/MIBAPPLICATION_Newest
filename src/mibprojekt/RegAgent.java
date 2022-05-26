@@ -60,26 +60,60 @@ public class RegAgent extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         lblAnstallning = new javax.swing.JLabel();
         txtAnstallning = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblAgentID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAgentID.setForeground(new java.awt.Color(255, 255, 255));
         lblAgentID.setText("Agent ID:");
+        getContentPane().add(lblAgentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
 
-        lblNamn.setText("Namn: *");
+        lblNamn.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblNamn.setForeground(new java.awt.Color(255, 255, 255));
+        lblNamn.setText("Name: *");
+        getContentPane().add(lblNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
-        lblTelefon.setText("Telefon:*");
+        lblTelefon.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblTelefon.setForeground(new java.awt.Color(255, 255, 255));
+        lblTelefon.setText("Phone number:*");
+        getContentPane().add(lblTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, -1, 14));
 
-        lblLosen.setText("Lösenord:*");
+        lblLosen.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblLosen.setForeground(new java.awt.Color(255, 255, 255));
+        lblLosen.setText("Password:*");
+        getContentPane().add(lblLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));
 
-        lblLosenUpprepa.setText("Upprepa Lösenord:*");
+        lblLosenUpprepa.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblLosenUpprepa.setForeground(new java.awt.Color(255, 255, 255));
+        lblLosenUpprepa.setText("Repeat Password:*");
+        getContentPane().add(lblLosenUpprepa, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
-        lblOmrade.setText("Tillhör Område:");
+        lblOmrade.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblOmrade.setForeground(new java.awt.Color(255, 255, 255));
+        lblOmrade.setText("Region:*");
+        getContentPane().add(lblOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
 
-        lblAdmin.setText("Är Admin:");
+        lblAdmin.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        lblAdmin.setText("Is Admin:");
+        getContentPane().add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, -1, -1));
 
         cbAdmin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nej", "Ja" }));
+        getContentPane().add(cbAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, 140, -1));
 
         cbOmrade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Svealand", "Götaland", "Norrland" }));
+        getContentPane().add(cbOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 140, -1));
+        getContentPane().add(txtLosenUpprepa, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 280, 140, -1));
+        getContentPane().add(txtLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 140, -1));
+        getContentPane().add(txtTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 140, -1));
+        getContentPane().add(txtNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 140, -1));
+
+        lblVisaID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblVisaID.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 88, 18));
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -87,89 +121,21 @@ public class RegAgent extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, 73, -1));
 
-        lblAnstallning.setText("ANstallnings Datum:*");
+        lblAnstallning.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAnstallning.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnstallning.setText("Date of Employment:*");
+        getContentPane().add(lblAnstallning, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
+        getContentPane().add(txtAnstallning, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 140, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblLosenUpprepa)
-                            .addComponent(lblLosen)
-                            .addComponent(lblTelefon)
-                            .addComponent(lblNamn)
-                            .addComponent(lblAgentID)
-                            .addComponent(lblAnstallning))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtLosenUpprepa)
-                            .addComponent(txtLosen)
-                            .addComponent(txtTelefon)
-                            .addComponent(txtNamn)
-                            .addComponent(txtAnstallning, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                            .addComponent(lblVisaID, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 106, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOmrade, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblAdmin, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cbAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(122, 122, 122))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(lblAgentID))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblVisaID, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNamn)
-                    .addComponent(txtNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLosen)
-                    .addComponent(txtLosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLosenUpprepa)
-                    .addComponent(txtLosenUpprepa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblAnstallning)
-                    .addComponent(txtAnstallning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblOmrade)
-                    .addComponent(cbOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAdmin)
-                    .addComponent(cbAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Register New Agent");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -329,6 +295,8 @@ public class RegAgent extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbAdmin;
     private javax.swing.JComboBox<String> cbOmrade;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel lblAgentID;
     private javax.swing.JLabel lblAnstallning;

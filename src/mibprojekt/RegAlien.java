@@ -79,49 +79,49 @@ public class RegAlien extends javax.swing.JFrame {
         txtRasBenamning = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAlienNamn.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblAlienNamn.setForeground(new java.awt.Color(255, 255, 255));
-        lblAlienNamn.setText("Alien Namn: *");
-        getContentPane().add(lblAlienNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
+        lblAlienNamn.setText("Alien Name: *");
+        getContentPane().add(lblAlienNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
 
         comboOmrade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Örebro", "Västerås", "Vilhelmina", "Borås" }));
         comboOmrade.setDoubleBuffered(true);
-        getContentPane().add(comboOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 102, -1));
+        getContentPane().add(comboOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 140, -1));
 
         lblAlienID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblAlienID.setForeground(new java.awt.Color(255, 255, 255));
         lblAlienID.setText("Alien ID:");
-        getContentPane().add(lblAlienID, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
+        getContentPane().add(lblAlienID, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
 
         lblTelnummer.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblTelnummer.setForeground(new java.awt.Color(255, 255, 255));
-        lblTelnummer.setText("Telefonnummer: ");
-        getContentPane().add(lblTelnummer, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
+        lblTelnummer.setText("Phone number:");
+        getContentPane().add(lblTelnummer, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
 
         lbllRegDatum.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lbllRegDatum.setForeground(new java.awt.Color(255, 255, 255));
-        lbllRegDatum.setText("Datum för Registrering:");
-        getContentPane().add(lbllRegDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, 27));
+        lbllRegDatum.setText("Registration Date:");
+        getContentPane().add(lbllRegDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 120, -1));
 
         lblPlaceras.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblPlaceras.setForeground(new java.awt.Color(255, 255, 255));
         lblPlaceras.setText("Placed in:");
-        getContentPane().add(lblPlaceras, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, -1, -1));
+        getContentPane().add(lblPlaceras, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
 
         lblLosen.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblLosen.setForeground(new java.awt.Color(255, 255, 255));
         lblLosen.setText("Password:*");
-        getContentPane().add(lblLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
+        getContentPane().add(lblLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
 
         lblAnsvarigAgent.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblAnsvarigAgent.setForeground(new java.awt.Color(255, 255, 255));
         lblAnsvarigAgent.setText("Responsible Agent:");
-        getContentPane().add(lblAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
+        getContentPane().add(lblAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
 
         btnReg.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         btnReg.setText("OK");
@@ -130,30 +130,33 @@ public class RegAlien extends javax.swing.JFrame {
                 btnRegActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 100, -1));
-        getContentPane().add(txtTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 112, -1));
-        getContentPane().add(txtNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 72, -1));
-        getContentPane().add(txtLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 112, -1));
-        getContentPane().add(txtLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 112, -1));
+        getContentPane().add(btnReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 100, -1));
+        getContentPane().add(txtTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 140, -1));
+        getContentPane().add(txtNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 140, -1));
+        getContentPane().add(txtLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 140, -1));
+        getContentPane().add(txtLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, 140, -1));
 
         lblLosenUpp.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblLosenUpp.setForeground(new java.awt.Color(255, 255, 255));
         lblLosenUpp.setText("Repeat Password:*");
-        getContentPane().add(lblLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        getContentPane().add(lblLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
         lblVisaAnsvarigAgent.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblVisaAnsvarigAgent.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(lblVisaAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 59, 27));
+        getContentPane().add(lblVisaAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 130, 20));
 
         lblVisaDatum.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblVisaDatum.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(lblVisaDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 457, 70, 30));
-        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 36, 17));
+        getContentPane().add(lblVisaDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 160, 20));
+
+        lblVisaID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblVisaID.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 60, 20));
 
         lblRas.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblRas.setForeground(new java.awt.Color(255, 255, 255));
         lblRas.setText("Race:");
-        getContentPane().add(lblRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
+        getContentPane().add(lblRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
 
         comboRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Worm", "Squid", "Boglodite" }));
         comboRas.addActionListener(new java.awt.event.ActionListener() {
@@ -161,9 +164,12 @@ public class RegAlien extends javax.swing.JFrame {
                 comboRasActionPerformed(evt);
             }
         });
-        getContentPane().add(comboRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 102, -1));
-        getContentPane().add(lblRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, 340, 929, 20));
-        getContentPane().add(txtRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 87, -1));
+        getContentPane().add(comboRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 140, -1));
+
+        lblRasBenamning.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblRasBenamning.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, 130, 20));
+        getContentPane().add(txtRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 210, 140, -1));
 
         btnCancel.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         btnCancel.setText("Cancel");
@@ -172,15 +178,15 @@ public class RegAlien extends javax.swing.JFrame {
                 btnCancelActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 510, 100, -1));
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 100, -1));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Register New Alien");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,11 +223,11 @@ public class RegAlien extends javax.swing.JFrame {
        ras = comboRas.getSelectedItem().toString(); 
        switch(ras){
            case "Squid":
-               lblRasBenamning.setText("Ange antal armar: ");
+               lblRasBenamning.setText("Amount of Arms: ");
                txtRasBenamning.setVisible(true);
                break;
            case "Boglodite":
-               lblRasBenamning.setText("Ange antal boogies: ");
+               lblRasBenamning.setText("Amount of Boogies: ");
                txtRasBenamning.setVisible(true);
                break;
            case "Worm":
@@ -396,8 +402,8 @@ public class RegAlien extends javax.swing.JFrame {
     private javax.swing.JButton btnReg;
     private javax.swing.JComboBox<String> comboOmrade;
     private javax.swing.JComboBox<String> comboRas;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblAlienID;
     private javax.swing.JLabel lblAlienNamn;
     private javax.swing.JLabel lblAnsvarigAgent;
