@@ -94,9 +94,23 @@ public class Startsida_Admin extends javax.swing.JFrame {
         });
         getContentPane().add(btnSok, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 70, 20));
 
+<<<<<<< Updated upstream
         btnEditRegionManager.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         btnEditRegionManager.setText("Edit Region Manager");
         btnEditRegionManager.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jButton1.setText("Show all Aliens in specific region");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 240, -1));
+
+        jButton2.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
+        jButton2.setText("Edit Region Manager");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditRegionManagerActionPerformed(evt);
             }
@@ -111,8 +125,18 @@ public class Startsida_Admin extends javax.swing.JFrame {
         });
         getContentPane().add(btnRaderaUtrustning, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
+<<<<<<< Updated upstream
         btnEditOfficeManager.setText("Edit Office Manager");
         getContentPane().add(btnEditOfficeManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 240, 30));
+=======
+        jButton3.setText("utrustni");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
+>>>>>>> Stashed changes
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Startsida_Agent.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
