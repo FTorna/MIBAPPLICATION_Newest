@@ -34,77 +34,44 @@ public class Startsida_Alien extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         lableAnsvarigAgent = new javax.swing.JLabel();
-        bytLosenKnapp = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        bg = new javax.swing.JLabel();
+        cbLoggaUt = new javax.swing.JComboBox<>();
+        background = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 563));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(lableAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 220, 190));
+        getContentPane().add(lableAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, 190));
 
-        bytLosenKnapp.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
-        bytLosenKnapp.setText("Change Password");
-        bytLosenKnapp.addActionListener(new java.awt.event.ActionListener() {
+        cbLoggaUt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Logga ut", "Ändra Lösenord" }));
+        cbLoggaUt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bytLosenKnappActionPerformed(evt);
+                cbLoggaUtActionPerformed(evt);
             }
         });
-        getContentPane().add(bytLosenKnapp, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 150, -1));
+        getContentPane().add(cbLoggaUt, new org.netbeans.lib.awtextra.AbsoluteConstraints(868, 30, 90, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Startsida_Alien.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/welcomealien.png"))); // NOI18N
-        bg.setText("jLabel2");
-        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 780, 620));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Startsida_Alien.png"))); // NOI18N
+        background.setText("jLabel1");
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bytLosenKnappActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bytLosenKnappActionPerformed
-        new BytLosen(idb).setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_bytLosenKnappActionPerformed
+    private void cbLoggaUtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLoggaUtActionPerformed
+        String action = cbLoggaUt.getSelectedItem().toString();
+        switch(action){
+            case "Logga ut":
+                System.exit(0);
+                break;
+            case "Ändra Lösenord":
+                new BytLosen(idb).setVisible(true);
+                dispose();
+                break;
+        }  
+    }//GEN-LAST:event_cbLoggaUtActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Alien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Alien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Alien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Alien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-              // new Startsida_Alien().setVisible(true);
-            }
-        });
-    }
 
     public void ansvarigAgent(){
         //     jTextField1.setText(onlyDate.format(date));
@@ -122,9 +89,8 @@ public class Startsida_Alien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bg;
-    private javax.swing.JButton bytLosenKnapp;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel background;
+    private javax.swing.JComboBox<String> cbLoggaUt;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JLabel lableAnsvarigAgent;
     // End of variables declaration//GEN-END:variables

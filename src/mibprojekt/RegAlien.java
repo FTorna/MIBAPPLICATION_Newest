@@ -78,8 +78,8 @@ public class RegAlien extends javax.swing.JFrame {
         lblRasBenamning = new javax.swing.JLabel();
         txtRasBenamning = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblRegisterNewAlien = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -178,15 +178,15 @@ public class RegAlien extends javax.swing.JFrame {
                 btnCancelActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 100, -1));
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, 100, -1));
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Register New Alien");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        lblRegisterNewAlien.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        lblRegisterNewAlien.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegisterNewAlien.setText("Register New Alien");
+        getContentPane().add(lblRegisterNewAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -398,12 +398,11 @@ public class RegAlien extends javax.swing.JFrame {
         return resultat;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnReg;
     private javax.swing.JComboBox<String> comboOmrade;
     private javax.swing.JComboBox<String> comboRas;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblAlienID;
     private javax.swing.JLabel lblAlienNamn;
     private javax.swing.JLabel lblAnsvarigAgent;
@@ -412,6 +411,7 @@ public class RegAlien extends javax.swing.JFrame {
     private javax.swing.JLabel lblPlaceras;
     private javax.swing.JLabel lblRas;
     private javax.swing.JLabel lblRasBenamning;
+    private javax.swing.JLabel lblRegisterNewAlien;
     private javax.swing.JLabel lblTelnummer;
     private javax.swing.JLabel lblVisaAnsvarigAgent;
     private javax.swing.JLabel lblVisaDatum;

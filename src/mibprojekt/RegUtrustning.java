@@ -37,7 +37,7 @@ public class RegUtrustning extends javax.swing.JFrame {
 
         lblUtrustingID = new javax.swing.JLabel();
         lblBenamning = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblRegisterNewEquipment = new javax.swing.JLabel();
         btnOK = new javax.swing.JButton();
         lblVisaID = new javax.swing.JLabel();
         txtBenamning = new javax.swing.JTextField();
@@ -45,7 +45,8 @@ public class RegUtrustning extends javax.swing.JFrame {
         lblEgenskap = new javax.swing.JLabel();
         lblKategori = new javax.swing.JLabel();
         txtEgenskap = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,10 +61,10 @@ public class RegUtrustning extends javax.swing.JFrame {
         lblBenamning.setText("Name:");
         getContentPane().add(lblBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Register New Equipment");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        lblRegisterNewEquipment.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        lblRegisterNewEquipment.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegisterNewEquipment.setText("Register New Equipment");
+        getContentPane().add(lblRegisterNewEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +72,7 @@ public class RegUtrustning extends javax.swing.JFrame {
                 btnOKActionPerformed(evt);
             }
         });
-        getContentPane().add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 73, -1));
+        getContentPane().add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 73, -1));
         getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 64, 25));
 
         txtBenamning.addActionListener(new java.awt.event.ActionListener() {
@@ -100,8 +101,16 @@ public class RegUtrustning extends javax.swing.JFrame {
         getContentPane().add(lblKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, -1, -1));
         getContentPane().add(txtEgenskap, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 132, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnCancel.setText("CANCEL");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, -1, -1));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,6 +177,10 @@ public class RegUtrustning extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBenamningActionPerformed
 
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -227,13 +240,14 @@ public class RegUtrustning extends javax.swing.JFrame {
         return false;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnOK;
     private javax.swing.JComboBox<String> cbKategori;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblBenamning;
     private javax.swing.JLabel lblEgenskap;
     private javax.swing.JLabel lblKategori;
+    private javax.swing.JLabel lblRegisterNewEquipment;
     private javax.swing.JLabel lblUtrustingID;
     private javax.swing.JLabel lblVisaID;
     private javax.swing.JTextField txtBenamning;

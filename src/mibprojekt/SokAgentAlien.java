@@ -138,8 +138,8 @@ public class SokAgentAlien extends javax.swing.JFrame {
         lblIsAdmin = new javax.swing.JLabel();
         lblRasBenamning = new javax.swing.JLabel();
         btnClose = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblSearchResults = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -208,13 +208,13 @@ public class SokAgentAlien extends javax.swing.JFrame {
         });
         getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Search Results");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 250, -1));
+        lblSearchResults.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        lblSearchResults.setForeground(new java.awt.Color(255, 255, 255));
+        lblSearchResults.setText("Search Results");
+        getContentPane().add(lblSearchResults, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 250, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -275,10 +275,9 @@ public class SokAgentAlien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnEdit;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAnsvarig;
     private javax.swing.JLabel lblDatum;
     private javax.swing.JLabel lblID;
@@ -287,6 +286,7 @@ public class SokAgentAlien extends javax.swing.JFrame {
     private javax.swing.JLabel lblOmrade;
     private javax.swing.JLabel lblRas;
     private javax.swing.JLabel lblRasBenamning;
+    private javax.swing.JLabel lblSearchResults;
     private javax.swing.JLabel lblTele;
     // End of variables declaration//GEN-END:variables
 }

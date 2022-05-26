@@ -39,8 +39,8 @@ public class RaderaUtrustning extends javax.swing.JFrame {
         btnRadera = new javax.swing.JToggleButton();
         btnCancel = new javax.swing.JToggleButton();
         cbUtrustning = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblDeleteEquipment = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,13 +64,13 @@ public class RaderaUtrustning extends javax.swing.JFrame {
         cbUtrustning.setEditable(true);
         getContentPane().add(cbUtrustning, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 170, -1));
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Delete Equipment");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        lblDeleteEquipment.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        lblDeleteEquipment.setForeground(new java.awt.Color(255, 255, 255));
+        lblDeleteEquipment.setText("Delete Equipment");
+        getContentPane().add(lblDeleteEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,10 +176,10 @@ public class RaderaUtrustning extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
     private javax.swing.JToggleButton btnCancel;
     private javax.swing.JToggleButton btnRadera;
     private javax.swing.JComboBox<String> cbUtrustning;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblDeleteEquipment;
     // End of variables declaration//GEN-END:variables
 }

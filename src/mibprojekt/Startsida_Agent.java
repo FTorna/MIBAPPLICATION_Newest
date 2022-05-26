@@ -21,7 +21,6 @@ public class Startsida_Agent extends javax.swing.JFrame {
     public Startsida_Agent(InfDB idb) {
         initComponents();
         this.idb = idb;
-        visaAgent();
     }
 
     /**
@@ -33,45 +32,41 @@ public class Startsida_Agent extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dropDown = new javax.swing.JComboBox<>();
-        lblAgent = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbLoggaUt = new javax.swing.JComboBox<>();
         btnSok = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblShowRegion = new javax.swing.JLabel();
         cbOmradesChef = new javax.swing.JComboBox<>();
         lblOmradesChef = new javax.swing.JLabel();
+        btnRegisterAlien = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        txtSearchAlien = new javax.swing.JTextField();
+        btnSearchAlien = new javax.swing.JButton();
+        btnRegisterEquipment = new javax.swing.JButton();
+        bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        dropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Ändra Lösenord", "Logga ut" }));
-        getContentPane().add(dropDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, -1, -1));
-        getContentPane().add(lblAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 70, 20));
+        cbLoggaUt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Ändra Lösenord", "Logga ut" }));
+        cbLoggaUt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbLoggaUtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbLoggaUt, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Show all Aliens in:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Svealand", "Götaland", "Norrland" }));
-        jComboBox1.setDoubleBuffered(true);
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
-
-        btnSok.setText("Search");
+        btnSok.setText("Search for Aliens in Area");
         btnSok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSokActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSok, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
+        getContentPane().add(btnSok, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 170, -1));
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Show region manager in:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+        lblShowRegion.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
+        lblShowRegion.setForeground(new java.awt.Color(255, 255, 255));
+        lblShowRegion.setText("Show region manager in:");
+        getContentPane().add(lblShowRegion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, 20));
 
         cbOmradesChef.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Svealand", "Götaland", "Norrland" }));
         cbOmradesChef.addActionListener(new java.awt.event.ActionListener() {
@@ -79,37 +74,50 @@ public class Startsida_Agent extends javax.swing.JFrame {
                 cbOmradesChefActionPerformed(evt);
             }
         });
-        getContentPane().add(cbOmradesChef, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, -1, -1));
-        getContentPane().add(lblOmradesChef, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 70, 20));
+        getContentPane().add(cbOmradesChef, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, -1, 20));
+        getContentPane().add(lblOmradesChef, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 70, 20));
 
-        jButton1.setText("jButton1");
+        btnRegisterAlien.setText("Register Alien");
+        btnRegisterAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterAlienActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegisterAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 170, -1));
+
+        jButton1.setText("Search for Aliens within Race");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 170, -1));
+        getContentPane().add(txtSearchAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 170, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/Bild_Startsida_Agent.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnSearchAlien.setText("SEARCH");
+        btnSearchAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchAlienActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSearchAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 80, 30));
+
+        btnRegisterEquipment.setText("Register Equipment");
+        btnRegisterEquipment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterEquipmentActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegisterEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 207, 170, -1));
+
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/Bild_Startsida_Agent.png"))); // NOI18N
+        bg.setText("jLabel3");
+        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void visaAgent(){
-        try {
-           String userID = LoggedUser.getUserID();
-           String AID = idb.fetchSingle("SELECT Namn FROM Agent WHERE Agent_ID = '" + userID + "'");
-           lblAgent.setText(AID);
-        }
-        catch (Exception ettUndantag){
-            JOptionPane.showMessageDialog(null, "Something went wrong. Please contact your IT-Administrator.");
-            System.out.println("InternFelmeddelande:" + ettUndantag.getMessage());
-        }
-    }
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
-        omrade = jComboBox1.getSelectedItem().toString();
         new Alien_OmradeNY(idb).setVisible(true);
     }//GEN-LAST:event_btnSokActionPerformed
 
@@ -135,65 +143,67 @@ public class Startsida_Agent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cbOmradesChefActionPerformed
 
+    private void cbLoggaUtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLoggaUtActionPerformed
+        String action = cbLoggaUt.getSelectedItem().toString();
+        switch(action){
+            case "Logga ut":
+                System.exit(0);
+                break;
+            case "Ändra Lösenord":
+                new BytLosen(idb).setVisible(true);
+                dispose();
+                break;
+        }
+       
+    }//GEN-LAST:event_cbLoggaUtActionPerformed
+
+    private void btnRegisterEquipmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterEquipmentActionPerformed
+        new RegUtrustning(idb).setVisible(true);
+    }//GEN-LAST:event_btnRegisterEquipmentActionPerformed
+
+    private void btnRegisterAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterAlienActionPerformed
+        new RegAlien(idb).setVisible(true);
+    }//GEN-LAST:event_btnRegisterAlienActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Alien_OmradeNY(idb).setVisible(true);
+        new Alien_Ras(idb).setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    public static String getOmrade(){
-        return omrade;
-    }
+    private void btnSearchAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAlienActionPerformed
+        String svarID = null;
+        if (Validering.textFaltHarVarde(txtSearchAlien)){
+                String sokningNamn = txtSearchAlien.getText();
+            try{
+                svarID = idb.fetchSingle("SELECT alien_ID from alien WHERE Namn= '" + sokningNamn + "'");
+            }            
+            catch (Exception annatUndantag){
+                JOptionPane.showMessageDialog(null, "Something went wrong. Please contact your IT-Administrator.");
+                System.out.println("InternFelmeddelande:" + annatUndantag.getMessage());  
+            }
+            if (svarID == null){
+                JOptionPane.showMessageDialog(null, "You have entered wrong username");            
+            }
+            else if(svarID !=null){
+                new SokAgentAlien(idb, svarID, "alien").setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_btnSearchAlienActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Agent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Agent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Agent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Agent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-               // new Startsida_Agent().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bg;
+    private javax.swing.JButton btnRegisterAlien;
+    private javax.swing.JButton btnRegisterEquipment;
+    private javax.swing.JButton btnSearchAlien;
     private javax.swing.JButton btnSok;
+    private javax.swing.JComboBox<String> cbLoggaUt;
     private javax.swing.JComboBox<String> cbOmradesChef;
-    private javax.swing.JComboBox<String> dropDown;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lblAgent;
     private javax.swing.JLabel lblOmradesChef;
+    private javax.swing.JLabel lblShowRegion;
+    private javax.swing.JTextField txtSearchAlien;
     // End of variables declaration//GEN-END:variables
 }

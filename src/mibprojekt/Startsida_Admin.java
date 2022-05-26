@@ -20,8 +20,8 @@ public class Startsida_Admin extends javax.swing.JFrame {
      */
     private static InfDB idb;
     public Startsida_Admin(InfDB idb) {
-        this.idb = idb;
         initComponents();
+        this.idb = idb;
     }
 
     /**
@@ -41,10 +41,9 @@ public class Startsida_Admin extends javax.swing.JFrame {
         cbAlien = new javax.swing.JCheckBox();
         txtFalt = new javax.swing.JTextField();
         btnSok = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEditRegionManager = new javax.swing.JButton();
         btnRaderaUtrustning = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnEditOfficeManager = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,15 +77,13 @@ public class Startsida_Admin extends javax.swing.JFrame {
 
         buttonGroup1.add(cbAgent);
         cbAgent.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
-        cbAgent.setForeground(new java.awt.Color(255, 255, 255));
         cbAgent.setText("Agent");
-        getContentPane().add(cbAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+        getContentPane().add(cbAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
 
         buttonGroup1.add(cbAlien);
         cbAlien.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
-        cbAlien.setForeground(new java.awt.Color(255, 255, 255));
         cbAlien.setText("Alien");
-        getContentPane().add(cbAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+        getContentPane().add(cbAlien, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, -1, -1));
         getContentPane().add(txtFalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 20));
 
         btnSok.setText("Search");
@@ -97,22 +94,14 @@ public class Startsida_Admin extends javax.swing.JFrame {
         });
         getContentPane().add(btnSok, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 70, 20));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEditRegionManager.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
+        btnEditRegionManager.setText("Edit Region Manager");
+        btnEditRegionManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEditRegionManagerActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, -1, -1));
-
-        jButton2.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
-        jButton2.setText("Edit Region Manager");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 240, -1));
+        getContentPane().add(btnEditRegionManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 240, -1));
 
         btnRaderaUtrustning.setText("Remove Equipment");
         btnRaderaUtrustning.addActionListener(new java.awt.event.ActionListener() {
@@ -122,13 +111,8 @@ public class Startsida_Admin extends javax.swing.JFrame {
         });
         getContentPane().add(btnRaderaUtrustning, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
-        jButton3.setText("utrustni");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+        btnEditOfficeManager.setText("Edit Office Manager");
+        getContentPane().add(btnEditOfficeManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 240, 30));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Startsida_Agent.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
@@ -185,66 +169,23 @@ public class Startsida_Admin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSokActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Alien_Ras(idb).setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void btnRegAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegAlienActionPerformed
         new RegAlien(idb).setVisible(true);
     }//GEN-LAST:event_btnRegAlienActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnEditRegionManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditRegionManagerActionPerformed
        new Andra_Omradeschef(idb).setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnEditRegionManagerActionPerformed
 
     private void btnRaderaUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaderaUtrustningActionPerformed
        new RaderaUtrustning(idb).setVisible(true);
     }//GEN-LAST:event_btnRaderaUtrustningActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       new RegUtrustning(idb).setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Startsida_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Startsida_Admin(idb).setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
+    private javax.swing.JButton btnEditOfficeManager;
+    private javax.swing.JButton btnEditRegionManager;
     private javax.swing.JButton btnRaderaUtrustning;
     private javax.swing.JButton btnRegAgent;
     private javax.swing.JButton btnRegAlien;
@@ -253,9 +194,6 @@ public class Startsida_Admin extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbAgent;
     private javax.swing.JCheckBox cbAlien;
     private javax.swing.JComboBox<String> cbLoggaUt;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JTextField txtFalt;
     // End of variables declaration//GEN-END:variables
 }

@@ -60,8 +60,9 @@ public class RegAgent extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         lblAnstallning = new javax.swing.JLabel();
         txtAnstallning = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblRegisterNewAgent = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -121,7 +122,7 @@ public class RegAgent extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, 73, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 73, -1));
 
         lblAnstallning.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         lblAnstallning.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,13 +130,21 @@ public class RegAgent extends javax.swing.JFrame {
         getContentPane().add(lblAnstallning, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
         getContentPane().add(txtAnstallning, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 140, -1));
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Register New Agent");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        lblRegisterNewAgent.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        lblRegisterNewAgent.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegisterNewAgent.setText("Register New Agent");
+        getContentPane().add(lblRegisterNewAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnCancel.setText("CANCEL");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, -1, -1));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,6 +164,10 @@ public class RegAgent extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,11 +305,11 @@ public class RegAgent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JComboBox<String> cbAdmin;
     private javax.swing.JComboBox<String> cbOmrade;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel lblAgentID;
     private javax.swing.JLabel lblAnstallning;
@@ -304,6 +317,7 @@ public class RegAgent extends javax.swing.JFrame {
     private javax.swing.JLabel lblLosenUpprepa;
     private javax.swing.JLabel lblNamn;
     private javax.swing.JLabel lblOmrade;
+    private javax.swing.JLabel lblRegisterNewAgent;
     private javax.swing.JLabel lblTelefon;
     private javax.swing.JLabel lblVisaID;
     private javax.swing.JTextField txtAnstallning;
