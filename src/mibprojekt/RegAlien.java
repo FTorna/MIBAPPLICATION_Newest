@@ -78,36 +78,82 @@ public class RegAlien extends javax.swing.JFrame {
         lblRasBenamning = new javax.swing.JLabel();
         txtRasBenamning = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblAlienNamn.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAlienNamn.setForeground(new java.awt.Color(255, 255, 255));
         lblAlienNamn.setText("Alien Namn: *");
+        getContentPane().add(lblAlienNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
         comboOmrade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Örebro", "Västerås", "Vilhelmina", "Borås" }));
         comboOmrade.setDoubleBuffered(true);
+        getContentPane().add(comboOmrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 102, -1));
 
-        lblAlienID.setText("ALIEN ID:");
+        lblAlienID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAlienID.setForeground(new java.awt.Color(255, 255, 255));
+        lblAlienID.setText("Alien ID:");
+        getContentPane().add(lblAlienID, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
 
+        lblTelnummer.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblTelnummer.setForeground(new java.awt.Color(255, 255, 255));
         lblTelnummer.setText("Telefonnummer: ");
+        getContentPane().add(lblTelnummer, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
 
+        lbllRegDatum.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lbllRegDatum.setForeground(new java.awt.Color(255, 255, 255));
         lbllRegDatum.setText("Datum för Registrering:");
+        getContentPane().add(lbllRegDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, 27));
 
-        lblPlaceras.setText("Placeras i: ");
+        lblPlaceras.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblPlaceras.setForeground(new java.awt.Color(255, 255, 255));
+        lblPlaceras.setText("Placed in:");
+        getContentPane().add(lblPlaceras, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, -1, -1));
 
-        lblLosen.setText("Lösenord: *");
+        lblLosen.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblLosen.setForeground(new java.awt.Color(255, 255, 255));
+        lblLosen.setText("Password:*");
+        getContentPane().add(lblLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
 
-        lblAnsvarigAgent.setText("Ansvarig Agent:");
+        lblAnsvarigAgent.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblAnsvarigAgent.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnsvarigAgent.setText("Responsible Agent:");
+        getContentPane().add(lblAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
 
+        btnReg.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         btnReg.setText("OK");
         btnReg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegActionPerformed(evt);
             }
         });
+        getContentPane().add(btnReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 100, -1));
+        getContentPane().add(txtTelefon, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 112, -1));
+        getContentPane().add(txtNamn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 72, -1));
+        getContentPane().add(txtLosen, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 112, -1));
+        getContentPane().add(txtLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 112, -1));
 
-        lblLosenUpp.setText("Upprepa Lösenord: *");
+        lblLosenUpp.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblLosenUpp.setForeground(new java.awt.Color(255, 255, 255));
+        lblLosenUpp.setText("Repeat Password:*");
+        getContentPane().add(lblLosenUpp, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
 
-        lblRas.setText("Ras:");
+        lblVisaAnsvarigAgent.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblVisaAnsvarigAgent.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblVisaAnsvarigAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 59, 27));
+
+        lblVisaDatum.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblVisaDatum.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblVisaDatum, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 457, 70, 30));
+        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 36, 17));
+
+        lblRas.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        lblRas.setForeground(new java.awt.Color(255, 255, 255));
+        lblRas.setText("Race:");
+        getContentPane().add(lblRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
 
         comboRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Worm", "Squid", "Boglodite" }));
         comboRas.addActionListener(new java.awt.event.ActionListener() {
@@ -115,127 +161,26 @@ public class RegAlien extends javax.swing.JFrame {
                 comboRasActionPerformed(evt);
             }
         });
+        getContentPane().add(comboRas, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 102, -1));
+        getContentPane().add(lblRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, 340, 929, 20));
+        getContentPane().add(txtRasBenamning, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 87, -1));
 
-        btnCancel.setText("CANCEL");
+        btnCancel.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 510, 100, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118)
-                        .addComponent(btnReg, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(170, 170, 170))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblLosen)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblAnsvarigAgent)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lblVisaAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtLosen, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblRas)
-                                .addComponent(lblPlaceras)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblLosenUpp)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtLosenUpp, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(lbllRegDatum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblVisaDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTelnummer)
-                    .addComponent(lblAlienNamn)
-                    .addComponent(lblAlienID))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblVisaID, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(comboOmrade, 0, 102, Short.MAX_VALUE)
-                            .addComponent(comboRas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(60, 60, 60)
-                        .addComponent(lblRasBenamning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtRasBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblAlienID)
-                    .addComponent(lblVisaID, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblAlienNamn)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTelnummer)
-                            .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRas)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(comboRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblRasBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtRasBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                        .addComponent(lblPlaceras)
-                        .addGap(27, 27, 27))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(comboOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLosen)
-                    .addComponent(txtLosenUpp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLosenUpp))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbllRegDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblAnsvarigAgent))
-                    .addComponent(lblVisaAnsvarigAgent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblVisaDatum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReg)
-                    .addComponent(btnCancel))
-                .addGap(24, 24, 24))
-        );
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Register New Alien");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mibprojekt/pictures/Bild_Blank.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -451,6 +396,8 @@ public class RegAlien extends javax.swing.JFrame {
     private javax.swing.JButton btnReg;
     private javax.swing.JComboBox<String> comboOmrade;
     private javax.swing.JComboBox<String> comboRas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAlienID;
     private javax.swing.JLabel lblAlienNamn;
     private javax.swing.JLabel lblAnsvarigAgent;

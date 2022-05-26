@@ -72,7 +72,7 @@ public class RegUtrustning extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 73, -1));
-        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 607, 64, 25));
+        getContentPane().add(lblVisaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 64, 25));
 
         txtBenamning.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
